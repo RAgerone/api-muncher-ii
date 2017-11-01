@@ -2,7 +2,7 @@ class Recipe
   attr_reader :name, :uri, :image, :ingredients, :health_labels, :nutrient_info, :url
 
   def initialize(name, uri, image = "", ingredients = "", health_labels = "", nutrient_info = "", url= "")
-    # raise ArgumentError if name == nil || name == "" || uri == nil || uri == ""
+    raise ArgumentError if name == nil || name == "" || uri == nil || uri == ""
     # binding.pry
     @name = name
     @uri = uri
