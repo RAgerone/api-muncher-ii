@@ -5,14 +5,13 @@ describe RecipesController do
   #   flunk "Need real tests"
   # end
   describe "index" do
-    it "gets instances of recipes" do
-
-    end
+    # get recipes_path("lasagna")
+    # must_respond_with :success
   end
 
   describe "show" do
     it "shows one recipe" do
-      
+
     end
   end
 

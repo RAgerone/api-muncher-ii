@@ -1,10 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <%# show one recipe here %>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <%# show one recipe here %>
+  <h1><%= @recipe.name %></h1>
+
+  <section class = "ingredients">
+    <img src=<%=@recipe.image %> alt="<%= @recipe.name %>">
+  </section>
+
+  <section class = "ingredients">
+    <h3>Ingredients</h3>
+    <ol>
+      <% @recipe.ingredients.each do |ingredient| %>
+      <li><%= ingredient %></li>
+      <% end %>
+    </ol>
+  </section>
+
+  <section class = "nutrients">
+    <h3>Nutrition Information</h3>
+    <ul class="list-lower-alpha">
+      <% @recipe.nutrient_info.each do |info| %>
+      <li><%= info[1]['label']%>: <%= info[1]['quantity'].round(2)%></li>
+      <% end %>
+    </ul>
+  </section>
+
+  <section class = "health-labels">
+    <h3>Health Labels</h3>
+    <ul>
+      <% @recipe.health_labels.each do |health_label| %>
+      <li><%= health_label %></li>
+      <% end %>
+    </ul>
+  </section>
+
+</body>
 </html>

@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Yum Yum</title>
-  </head>
-  <body>
-    <%# Show all of the fancy recipes here %>
-    <% @recipes.each do |recipe| %>
-    <section class="small-2 large-4 columns">
-      <h3><%= link_to recipe.name, recipe_path(recipe.uri) %></h3>
-      <% recipe.image %>
-      <img src="<%=recipe.image %>" alt=<%= recipe.name %>>
-      <% end %>
+<head>
+  <meta charset="utf-8">
+  <title>Yum Yum</title>
+</head>
+<body>
+  <%# Show all of the fancy recipes here %>
+  <div class="wrap row small-up-1 medium-up-2 large-up-4">
 
-    </section>
-  </body>
+
+  <% @recipes.each do |recipe| %>
+    <div class="column food-block">
+      <h3 class = "food-name"><%= link_to recipe.name, recipe_path(recipe.uri) %></h3>
+      <% params[:uri] = recipe.uri[/recipe_.*/] %>
+
+      <% recipe.image %>
+      <%= link_to recipe_path(params[:uri]) do %>
+      <img class = "food-image" src="<%=recipe.image %>" alt= "<%= recipe.name %>">
+        <% end %>
+        </div>
+      <% end %>
+      </div>
+
+
+</body>
 </html>

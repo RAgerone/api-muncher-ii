@@ -21,26 +21,18 @@ class EdamamApiWrapper
   end #end list
 
   def self.find_recipe(search_url)
-    url = BASE_URL + "r=" + search_url + "&app_id=#{ID}" + "&app_key=#{KEY}"
+    url = BASE_URL + "r=" + "http://www.edamam.com/ontologies/edamam.owl%23" + search_url + "&app_id=#{ID}" + "&app_key=#{KEY}"
     data = HTTParty.get(url)
-    data_parsed = data.parsed_response
-
-    # data_parsed = data.parsed_response["hits"]
-    recipe_list = []
-    unless data_parsed.empty?
-      data["recipes"].each do |recipe_data|
-        recipe_list << recipe_data
-      end
-    else
+    data_parsed = data.parsed_response[0]
+    if data_parsed.empty?
       return "Empty Array in data_parsed"
     end
-    return recipe_list
+    recipe = create_recipe(data_parsed)
   end #end list
 
   private
   #
   def self.create_recipe(api_params)
-    # binding.pry
     Recipe.new(
       api_params['label'],
       api_params['uri'],

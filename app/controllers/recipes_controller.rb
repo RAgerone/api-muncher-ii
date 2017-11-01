@@ -6,15 +6,13 @@ class RecipesController < ApplicationController
       flash[:message] = "No Results"
       flash[:status] = "error"
       redirect_to root_path
-    else
-      flash[:message] = "Success! Recipes found."
-      flash[:status] = "success"
     end
     return @recipes
   end
 
   def show
-    @recipe = EdamamApiWrapper.find_recipe(params[])
+    @uri = params[:name]
+    @recipe = EdamamApiWrapper.find_recipe(@uri)
   end
 
   def main
