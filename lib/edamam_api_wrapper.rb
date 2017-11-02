@@ -4,10 +4,10 @@ class EdamamApiWrapper
   KEY = ENV["EDAMAM_KEY"]
 
   def self.list_recipes(search_terms)
-    url = BASE_URL + "q=" + search_terms + "&app_id=#{ID}" + "&app_key=#{KEY}"
+    url = BASE_URL + "q=" + search_terms + "&app_id=#{ID}" + "&app_key=#{KEY}&from=0&to=99"
 
     data = HTTParty.get(url)
-      check_status(data)
+    check_status(data)
     data_parsed = data.parsed_response["hits"]
     recipe_list = []
     unless data_parsed.empty?

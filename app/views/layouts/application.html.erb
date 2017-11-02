@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,7 +7,6 @@
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Yum Yum" %>">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
     <%# Modernizr is required for Zurb Foundation %>
-    <%= javascript_include_tag 'vendor/modernizr' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
     <%= csrf_meta_tags %>
   </head>
