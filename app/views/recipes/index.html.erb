@@ -10,9 +10,8 @@
 
   <% @paginatable_recipes.each do |recipe| %>
     <div class="column food-block">
-      <h3 class = "recipe-name"><%= link_to recipe.name, recipe_path(recipe.uri) %></h3>
-      <% params[:uri] = recipe.uri[/recipe_.*/] %>
-
+        <% params[:uri] = recipe.uri[/recipe_.*/] %>
+      <h3 class = "recipe-name"><%= link_to recipe.name, recipe_path(params[:uri]) %></h3>
       <% recipe.image %>
       <%= link_to recipe_path(params[:uri]) do %>
       <img class = "food-image" src="<%=recipe.image %>" alt= "<%= recipe.name %>">

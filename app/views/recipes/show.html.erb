@@ -15,16 +15,16 @@
     <a href="<%= @recipe.url %>">Full Recipe </a>
   </div>
 
-  <section class = "ingredients">
+  <section class = "ingredients small-up-1 medium-up-2 large-up-2">
     <h3>Ingredients</h3>
-    <ol>
+    <ul>
       <% @recipe.ingredients.each do |ingredient| %>
       <li><%= ingredient %></li>
       <% end %>
-    </ol>
+    </ul>
   </section>
 
-  <section class = "nutrients">
+  <section class = "nutrients small-up-1 medium-up-2 large-up-2">
     <h3>Nutrition Information</h3>
     <ul class="list-lower-alpha">
       <% @recipe.nutrient_info.each do |info| %>

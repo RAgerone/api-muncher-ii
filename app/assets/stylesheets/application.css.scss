@@ -21,6 +21,12 @@ less dark =#B8D4AE
 less dark = #DAEAD8
 
  */
+ @import url('https://fonts.googleapis.com/css?family=Comfortaa|Domine|Monda|Nobile|Playfair+Display+SC');
+
+ h1, h2, h3, h4, h5, a{
+   font-family: 'Nobile', sans-serif;
+ }
+
 nav{
   display: inline-block;
 }
