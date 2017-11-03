@@ -1,5 +1,5 @@
-require '../../lib/edamam_api_wrapper'
-require '../../lib/edamam_api_rapper'
+require './lib/edamam_api_wrapper'
+require './lib/recipe'
 class RecipesController < ApplicationController
   def index
     @search = params[:search]
