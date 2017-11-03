@@ -1,17 +1,49 @@
 <%# navigation styled for Zurb Foundation 5 %>
 
- <nav class="top-bar" data-topbar>
+<nav class="top-bar" data-topbar>
 
   <div class="top-bar-left">
 
-  <ul class="title-area">
-    <li class="name"><%= link_to 'Home', root_path %></li>
-    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-  </ul>
-    </div>
+    <ul class="title-area">
+      <li class="name"><%= link_to 'Home', root_path %></li>
+    </ul>
+  </div>
   <div class="top-bar-section">
     <ul>
-      <%= render 'layouts/navigation_links' %>
     </ul>
+    <!-- <ul class="vertical medium-horizontal menu">
+      <li><a href="#0"><i class="fi-list"></i> <span>One</span></a></li>
+      <li><a href="#0"><i class="fi-list"></i> <span>Two</span></a></li>
+      <li><a href="#0"><i class="fi-list"></i> <span>Three</span></a></li>
+      <li><a href="#0"><i class="fi-list"></i> <span>Four</span></a></li>
+    </ul> -->
+
+    <button class="button nav-button" type="button" data-toggle="example-dropdown">Fancy Dishes</button>
+    <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
+      Example form in a dropdown.
+      <ul>
+        <li>ice</li>
+        <li>dream</li>
+      </ul>
+    </div>
+
+
+    <button class="button nav-button" type="button" data-toggle="example-dropdown">Meal</button>
+    <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
+      Example form in a dropdown.
+      <ul>
+        <li>ice</li>
+        <li>dream</li>
+      </ul>
+    </div>
+
+    <button class="button nav-button" type="button" data-toggle="example-dropdown">Cheap Ingredients</button>
+    <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
+      Example form in a dropdown.
+      <ul>
+        <li>ice</li>
+        <li>dream</li>
+      </ul>
+    </div>
   </div>
 </nav>

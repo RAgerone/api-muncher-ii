@@ -8,9 +8,12 @@
   <%# show one recipe here %>
   <h1><%= @recipe.name %></h1>
 
-  <section class = "ingredients">
+  <section class = "recipe-image">
     <img src=<%=@recipe.image %> alt="<%= @recipe.name %>">
   </section>
+  <div class="recipe-link">
+    <a href="<%= @recipe.url %>">Full Recipe </a>
+  </div>
 
   <section class = "ingredients">
     <h3>Ingredients</h3>

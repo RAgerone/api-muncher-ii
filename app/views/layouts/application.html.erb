@@ -11,7 +11,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <h1>Food Things</h1>
+    <h1>Yum Yum</h1>
     <header>
       <%= render 'layouts/navigation' %>
     </header>
@@ -19,5 +19,12 @@
        <%= render 'layouts/messages' %>
        <%= yield %>
     </main>
+    <footer>
+      <div class="wrap-row small-up-1">
+        <div class="edamam">
+        <p class="edamam">Powered by Edamam</p>
+          </div>
+      </div>
+    </footer>
   </body>
 </html>

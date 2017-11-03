@@ -2,10 +2,10 @@ class RecipesController < ApplicationController
   def index
     @search = params[:search]
     @recipes = EdamamApiWrapper.list_recipes(@search)
-    @paginatable_recipes = Kaminari.paginate_array(@recipes).page(params[:page]).per(10)
+
     # binding.pry
     # @paginatable_recipes = @recipes.page(params[:page]).per(10)
-    if @search.empty?
+    if @search == ""
       flash[:message] = "Must put words in the Search bar.  How about 'cake'?"
       flash[:status] = "error"
       redirect_to root_path
@@ -13,7 +13,10 @@ class RecipesController < ApplicationController
       flash[:message] = "No Results"
       flash[:status] = "error"
       redirect_to root_path
+    else
+      @paginatable_recipes = Kaminari.paginate_array(@recipes).page(params[:page]).per(10)
     end
+
   end
 
   def show

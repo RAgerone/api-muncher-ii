@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <%= form_tag('/recipes', method: "get") do %>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <section class = "box-around-search">
+    <div class="searcher">
+      <%= form_tag('/recipes', method: "get") do %>
       <%= label_tag(:search, "Search for:") %>
-      <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag("Search") %>
-    <% end %>
-  </body>
+      <%= text_field_tag :search, params[:search], class: "search-bar"%>
+      <%= submit_tag("Search", class: "button search-button")%>
+      <% end %>
+    </div>
+  </section>
+</body>
 </html>

@@ -13,6 +13,53 @@
  *= require_tree .
  *= require_self
 //= require foundation_and_overrides
-
+green = cadetblue
+purple = #9068be
+whitish = #e1e8f0
+red = #e62739
  */
- 
+nav{
+  display: inline-block;
+}
+ .top-bar{
+   background-color: #e62739;
+ }
+
+ .title_area{
+   display: inline-block;
+ }
+
+nav div ul, .nav-button{
+  display: inline-block;
+  list-style: none;
+  background-color: #9068be;
+}
+
+ .name{
+    text-decoration: none;
+    color: #e1e8f0;
+    background-color: #e62739;
+}
+
+a{
+  font-size: 2em;
+}
+
+.dropdown-pane{
+  background-color: #e1e8f0;
+}
+header{
+  margin: 0px;
+  padding: 0px;
+}
+.dropdown-pane ul li{
+  color:darkcyan;
+}
+footer{
+  background-color: dimgray;
+  height: 50px;
+  padding: 20px;
+}
+.edamam{
+  color: #e1e8f0;
+}
