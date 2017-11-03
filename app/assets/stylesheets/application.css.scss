@@ -13,16 +13,19 @@
  *= require_tree .
  *= require_self
 //= require foundation_and_overrides
-green = cadetblue
-purple = #9068be
-whitish = #e1e8f0
-red = #e62739
+pinkish = #E9AE9B
+darkgreen = #2A4F37
+less dark = #55875A
+less dark = #85B57E
+less dark =#B8D4AE
+less dark = #DAEAD8
+
  */
 nav{
   display: inline-block;
 }
  .top-bar{
-   background-color: #e62739;
+   background-color: darkred;
  }
 
  .title_area{
@@ -38,7 +41,7 @@ nav div ul, .nav-button{
  .name{
     text-decoration: none;
     color: #e1e8f0;
-    background-color: #e62739;
+    background-color: darkred;
 }
 
 a{
