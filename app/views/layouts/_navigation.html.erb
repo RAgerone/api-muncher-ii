@@ -2,48 +2,55 @@
 
 <nav class="top-bar" data-topbar>
 
-  <div class="top-bar-left">
+  <div class="top-bar-left small-up-1 large-up-2">
 
-    <ul class="title-area">
-      <li class="name"><%= link_to 'Home', root_path %></li>
+    <ul class="title-area small-up-6 large-up-6">
+      <li class="name">
+        <%= link_to root_path, :class => 'home-button' do %>
+        <span class="nav-icon">
+          <i class="fa fa-home"></i>
+        </span>
+        <span class="nav-text">
+          Home
+        </span>
+        <% end %>
+      </li>
     </ul>
   </div>
-  <div class="top-bar-section">
-    <ul>
-    </ul>
-    <!-- <ul class="vertical medium-horizontal menu">
-      <li><a href="#0"><i class="fi-list"></i> <span>One</span></a></li>
-      <li><a href="#0"><i class="fi-list"></i> <span>Two</span></a></li>
-      <li><a href="#0"><i class="fi-list"></i> <span>Three</span></a></li>
-      <li><a href="#0"><i class="fi-list"></i> <span>Four</span></a></li>
-    </ul> -->
+  <div class="top-bar-section small-up-2 large-up-6">
 
-    <button class="button nav-button" type="button" data-toggle="example-dropdown">Fancy Dishes</button>
-    <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
-      Example form in a dropdown.
+    <button class="button nav-button small-up-6 large-up-6" type="button" data-toggle="fancy-dropdown">Fancy Dishes</button>
+    <div class="dropdown-pane" id="fancy-dropdown" data-dropdown data-auto-focus="true">
+      Impress everyone you know.
       <ul>
-        <li>ice</li>
-        <li>dream</li>
+        <li> <%= link_to "Beef Wellington", recipes_path(:search => 'beef wellington') %></li>
+        <li> <%= link_to "Chicken Cordon Bleu", recipes_path(:search => 'Chicken Cordon Bleu') %> </li>
+        <li><%= link_to "Crudités", recipes_path(:search => 'Crudites') %></li>
       </ul>
     </div>
 
 
-    <button class="button nav-button" type="button" data-toggle="example-dropdown">Meal</button>
-    <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
-      Example form in a dropdown.
+    <button class="button nav-button small-up-6 large-up-6" type="button" data-toggle="meals-dropdown">Meal</button>
+    <div class="dropdown-pane" id="meals-dropdown" data-dropdown data-auto-focus="true">
+      All the meals.
       <ul>
-        <li>ice</li>
-        <li>dream</li>
+        <li><%= link_to "Breakfast", recipes_path(:search => 'Breakfast') %></li>
+        <li><%= link_to "Lunch", recipes_path(:search => 'Lunch') %></li>
+        <li><%= link_to "Dinner", recipes_path(:search => 'Dinner') %></li>
+        <li><%= link_to "Dessert", recipes_path(:search => 'Dessert') %></li>
+        <li><%= link_to "Snacks", recipes_path(:search => 'Snacks') %></li>
       </ul>
     </div>
 
-    <button class="button nav-button" type="button" data-toggle="example-dropdown">Cheap Ingredients</button>
-    <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
-      Example form in a dropdown.
-      <ul>
-        <li>ice</li>
-        <li>dream</li>
-      </ul>
+    <button class="button nav-button small-up-6 large-up-6" type="button" data-toggle="cheap-dropdown">Cheap Ingredients</button>
+      <div class="dropdown-pane" id="cheap-dropdown" data-dropdown data-auto-focus="true">
+      Get the most out of your money.
+        <ul>
+          <li><%= link_to "Flour", recipes_path(:search => 'Flour') %></li>
+          <li><%= link_to "Eggs", recipes_path(:search => 'Eggs') %></li>
+          <li><%= link_to "Rice", recipes_path(:search => 'Rice') %></li>
+          <li><%= link_to "Beans", recipes_path(:search => 'Beans') %></li>
+          </ul>
+      </div>
     </div>
-  </div>
 </nav>

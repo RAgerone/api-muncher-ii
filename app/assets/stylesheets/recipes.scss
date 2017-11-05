@@ -9,24 +9,71 @@
   max-height: 100%;
 }
 .recipe-name a{
-  color:cadetblue;
-  size: 2em;
+  color:#85B57E;
+  font-size: .5em;
 }
 
-.recipe-name{
-  color:cadetblue;
+.container-index{
+  margin: 0px;
+  width: 100%;
+  background-color: #fefefe;
+}
+.background-index{
+  padding: 80px;
 }
 h3{
-  size: 2em;
+  font-size: 2em;
 }
 
 h1{
-  size: 3em;
+  font-size: 3em;
 }
-h1, h2, h3, h4, h5 {
+.page-list a{
+  color:#B8D4AE;
   font-family: 'Nobile', sans-serif;
 }
-
 .searcher{
-background-image: url(/assets/images/berries-1845683_1920.jpg);
+  background-image: url(/assets/images/berries-1845683_1920.jpg);
+}
+.recipe-link a{
+  list-style: none;
+  color: #fefefe;
+  padding: 10px;
+  background-color: #DDA0DD;
+  border-radius: 6px;
+  height: 45px;
+  text-align: center;
+  transition-property: background, border-radius;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  width: 140px;
+}
+.recipe-link a:hover {
+  background: #ff7b29;
+  border-radius: 50%;
+}
+.ingredients, .nutrients, .recipe-image, .health-labels, .recipe-name, .recipe-header{
+  padding: 50px;
+  display: inline-block;
+}
+
+.recipe-header{
+color:#55875A;
+font-size: 4em;
+}
+
+.top-block-title-image{
+background-color: #DAEAD8;
+}
+
+.recipe-image img{
+  width: 100%;
+}
+
+.ingredients ul li, .nutrients ul li, .health-labels ul li{
+  list-style: none;
+
+}
+.nutrients ul li, .health-labels ul li{
+  display: inline-block;
 }

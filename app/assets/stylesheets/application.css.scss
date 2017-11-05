@@ -1,59 +1,92 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
 //= require foundation_and_overrides
-pinkish = #E9AE9B
+pinkish = #DDA0DD
 darkgreen = #2A4F37
 less dark = #55875A
 less dark = #85B57E
 less dark =#B8D4AE
 less dark = #DAEAD8
 
- */
- @import url('https://fonts.googleapis.com/css?family=Comfortaa|Domine|Monda|Nobile|Playfair+Display+SC');
+*/
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Domine|Monda|Nobile|Playfair+Display+SC');
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
 
- h1, h2, h3, h4, h5, a{
-   font-family: 'Nobile', sans-serif;
- }
+
+.big-title a{
+  font-size: 72px;
+  background: -webkit-linear-gradient(#eee, #DDA0DD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Titan One', cursive;
+  margin: 0px;
+  padding: 20px;
+}
+
+.top-words{
+  background-color:#fefefe;
+}
+h1, h2, h3, h4, h5, a{
+  font-family: 'Nobile', sans-serif;
+}
 
 nav{
   display: inline-block;
 }
- .top-bar{
-   background-color: darkred;
- }
+.top-bar{
+  background-color: #85B57E;
+}
 
- .title_area{
-   display: inline-block;
- }
+.title_area{
+  display: inline-block;
+}
 
 nav div ul, .nav-button{
   display: inline-block;
   list-style: none;
-  background-color: #9068be;
+  background-color: #DDA0DD;
+}
+.nav-button{
+  border-radius: 6px;
+  height: 45px;
+  text-align: center;
+  transition-property: background, border-radius;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  width: 120px;
+}
+.nav-button:hover {
+  background: #ff7b29;
+  border-radius: 50%;
 }
 
- .name{
-    text-decoration: none;
-    color: #e1e8f0;
-    background-color: darkred;
+
+.name{
+  text-decoration: none;
+  color: #e1e8f0;
+  background-color: #85B57E;
 }
 
 a{
   font-size: 2em;
 }
-
+.dropdown-pane ul li a{
+  color:#55875A;
+  font-size: 1em;
+}
 .dropdown-pane{
   background-color: #e1e8f0;
 }
@@ -65,7 +98,7 @@ header{
   color:darkcyan;
 }
 footer{
-  background-color: dimgray;
+  background-color: #2A4F37;
   height: 50px;
   padding: 20px;
 }

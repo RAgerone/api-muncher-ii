@@ -5,8 +5,6 @@ class RecipesController < ApplicationController
     @search = params[:search]
     @recipes = EdamamApiWrapper.list_recipes(@search)
 
-    # binding.pry
-    # @paginatable_recipes = @recipes.page(params[:page]).per(10)
     if @search == ""
       flash[:message] = "Must put words in the Search bar.  How about 'cake'?"
       flash[:status] = "error"
