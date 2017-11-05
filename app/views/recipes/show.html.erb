@@ -22,27 +22,38 @@
 
 
 
-<div class="wrap row small-up-1 medium-up-2 large-up-3">
+  <div class="wrap row small-up-1 medium-up-2 large-up-3">
 
-  <section class = "ingredients column">
-    <h3>Ingredients</h3>
-    <ul>
-      <% @recipe.ingredients.each do |ingredient| %>
-      <li><%= ingredient %></li>
-      <% end %>
-    </ul>
-  </section>
+    <section class = "ingredients column">
+      <h3>Ingredients</h3>
+      <ul>
+        <% @recipe.ingredients.each do |ingredient| %>
+        <li><%= ingredient %></li>
+        <% end %>
+      </ul>
+    </section>
 
 
 
-  <section class = "nutrients column">
+    <section class = "nutrients column">
+      <table class="hover">
+        <thead>
+          <th width="200">Nutrition Information</th>
+          <th width="150"></th>
+        </thead>
+        <tbody>
 
-    <h3>Nutrition Information</h3>
-    <ul class="list-lower-alpha">
-      <% @recipe.nutrient_info.each do |info| %>
-      <li><%= info[1]['label']%>: <%= info[1]['quantity'].round(2)%></li>
-      <% end %>
-    </ul>
+
+          <% @recipe.nutrient_info.each do |info| %>
+          <tr>
+            <td><%= info[1]['label']%></td>
+            <td><%= info[1]['quantity'].round(2)%></td>
+          </tr>
+        </th>
+        <% end %>
+      </tbody>
+
+    </table>
   </section>
 
   <section class = "health-labels column">
