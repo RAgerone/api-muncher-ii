@@ -28,7 +28,6 @@ class RecipesController < ApplicationController
       redirect_to root_path
     else
       flash[:status] = :success
-      flash[:message] = "Successfully retrieved recipe."
     end
     @recipe
   end

@@ -28,7 +28,7 @@ describe RecipesController do
   end
 
   describe "show" do
-    
+
 
     it "has success status when works correctly" do
 
@@ -37,7 +37,6 @@ describe RecipesController do
         get recipe_path( "recipe_637913ec61d9da69eb451818c3293df2")
         must_respond_with 200
         flash[:status].must_equal :success
-        flash[:message].must_equal "Successfully retrieved recipe."
       end
     end
 
